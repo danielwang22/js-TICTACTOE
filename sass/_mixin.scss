@@ -1,0 +1,109 @@
+//mixin
+@mixin container($width,$height){
+    width: $width;
+    height: $height;
+    margin-right: auto;
+    margin-left: auto;
+}
+//grid
+//格線
+@mixin makegrid($col){
+    flex: 0 0 (100% * $col);
+    max-width: (100% * $col);
+}
+//breakpoint
+@mixin breakpoint($point){
+  @if $point == xl{
+    @media (max-width: 1400px){
+        @content;
+    }
+  }
+  @else if $point == lg{
+    @media (max-width: 992px){
+        @content;
+    }
+  }
+  @else if $point == md{
+    @media (max-width: 768px) {
+        @content;
+    }
+  }
+  @else if $point == sm{
+    @media (max-width: 576px) {
+        @content;
+    }
+  }
+  @else if $point == xs{
+    @media (max-width: 414px) {
+        @content;
+    }
+  }
+}
+
+//component
+//circle
+@mixin circleFill($width,$height,$bgc,$border,$border-color) {
+    @include container($width,$height);
+    background: $bgc;
+    border: $border solid $border-color;
+    border-radius: 50%;
+}
+@mixin circleStroke($width,$height,$border) {
+    @include container($width,$height);
+    background: $color-thrid;
+    border: $border solid $color-primary;
+    border-radius: 50%;
+    position: relative;
+    z-index: -1;
+    .inline-circle{
+      @include container($width - 40px ,$height - 40px);
+      background: $color-thrid;
+      border: $border solid $color-primary;
+      border-radius: 50%;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 999;
+  }
+}
+//corss
+@mixin corssFill($width,$height,$bgc) {
+    @include container($width,$height);
+    position: relative;
+    &::after,&::before{
+        content: "";
+        background-color: $bgc;
+        width: 15%;
+        height: 100%;
+        position: absolute;
+        left: 40%;
+        z-index: -1;
+    }
+    &::after{
+        transform: rotate(45deg);
+    }
+    &::before{
+        transform: rotate(-45deg);
+    }
+}
+@mixin corssStroke($width,$height) {
+  @include container($width,$height);
+    position: relative;
+    &::after,&::before{
+        content: "";
+        background-color: $color-thrid;
+        border: 3px solid $color-forth;
+        width: 15%;
+        height: 100%;
+        position: absolute;
+        left: 40%;
+        z-index: -1;
+    }
+    &::after{
+        transform: rotate(45deg);
+    }
+    &::before{
+        transform: rotate(-45deg);
+    }
+}

@@ -1,0 +1,40 @@
+$color-primary: #FF6D70;
+$color-secondary: #ED494C;
+$color-thrid: black;
+$color-forth:white;
+$spacer: 10px !default;
+
+//variables map
+//color
+$color-theme: (
+    primary:$color-primary,
+    secondary:$color-secondary,
+    thrid:$color-thrid,
+    forth:$color-forth
+
+);
+//spacer
+$spacers:(
+    0: 0,
+    1: $spacer,
+    2: ($spacer * .9),
+    3: ($spacer * 1.9),
+    4: ($spacer * 2.4),
+    5: ($spacer * 4.7),
+    6: ($spacer * 5.2)
+);
+//font size
+$fontSize: (
+    xs: 1.25rem,
+    sm: 3rem,
+    md: 6.25rem,
+    lg: 9.625rem
+);
+//breakpoint
+$breakpoints: (
+  xl : 1200px,
+  lg : 992px,
+  md : 768px,
+  sm : 576px,
+  xs : 414px
+) !default;

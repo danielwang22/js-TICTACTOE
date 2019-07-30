@@ -1,0 +1,16 @@
+*,
+*::before,
+*::after{
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+    font-family: 'Roboto Condensed', sans-serif;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: $color-forth;
+    text-align: left;
+    background-color: $color-primary;
+    transition: all 1s linear;
+}

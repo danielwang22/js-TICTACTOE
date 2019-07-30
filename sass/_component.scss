@@ -1,0 +1,121 @@
+//container
+.container{
+    @include breakpoint(xs){
+        @include container(300px,auto)
+    }
+    @include container(600px,auto)
+}
+//shape
+.circle-fill{
+    @include circleFill(160px,160px,$color-thrid,10px,$color-primary);
+    @include breakpoint(xs){
+        @include circleFill(100px,100px,$color-thrid,5px,$color-primary)
+    }
+}
+.circle-stroke{
+    @include circleStroke(160px,160px,4px);
+    @include breakpoint(xs){
+        @include circleStroke(100px,100px,3px);
+    }
+}
+.choice-circle-fill{
+    @include circleFill(350px,350px,$color-thrid,40px,$color-secondary);
+    @include breakpoint(xs){
+        @include circleFill(120px,120px,$color-thrid,20px,$color-secondary);
+    }
+    transition: all .3s ease-out;
+    &:hover{
+        @include circleFill(400px,400px,$color-thrid,40px,$color-secondary);
+        @include breakpoint(xs){
+            @include circleFill(150px,150px,$color-thrid,20px,$color-secondary);
+        }
+    }
+}
+#choice-card-circle{
+    box-shadow: 0 0 20px rgba(170, 170, 170, 0.247);
+    border-top-right-radius: 2rem;
+    border-bottom-left-radius: 2rem;
+    padding: 20px;
+}
+.board-circle-fill{
+    @include circleFill(48px,48px,$color-thrid,5px,$color-forth)
+}
+.fight-circle-fill{
+    @include circleFill(96px,96px,$color-primary,10px,$color-thrid);
+    @include breakpoint(xs){
+        @include circleFill(80px,80px,$color-primary,10px,$color-thrid);
+    }
+}
+.winner-circle-fill{
+    @include circleFill(400px,400px,$color-primary,40px,$color-secondary);
+    @include breakpoint(xs){
+        @include circleFill(210px,210px,$color-primary,20px,$color-secondary);
+    }
+}
+.draw-circle-fill{
+    @include circleFill(250px,250px,$color-primary,30px,$color-secondary);
+    @include breakpoint(xs){
+        @include circleFill(150px,150px,$color-primary,20px,$color-secondary);
+    }
+}
+
+
+.corss-fill{
+    @include corssFill(160px,160px,$color-primary);
+    @include breakpoint(xs){
+        @include corssFill(100px,100px,$color-primary);
+    }
+}
+.corss-stroke{
+    @include corssStroke(160px,160px);
+    @include breakpoint(xs){
+        @include corssStroke(100px,100px);
+    }
+}
+.choice-corss-fill{
+    @include corssFill(350px,350px,$color-secondary);
+    z-index: 1;
+    transition: all .6s ease-out;
+    @include breakpoint(xs){
+        @include corssFill(120px,120px,$color-secondary);
+    }
+    &:hover{
+        @include corssFill(400px,400px,$color-secondary);
+        @include breakpoint(xs){
+            @include corssFill(150px,150px,$color-secondary);
+        }
+        transform: translateX(5%);
+        transform: rotate(90deg);
+        z-index: 1;
+    }
+}
+#choice-card-corss{
+    box-shadow: 0 0 20px rgba(170, 170, 170, 0.247);
+    border-top-left-radius: 2rem;
+    border-bottom-right-radius: 2rem;
+    padding: 20px;
+}
+.board-corss-fill{
+    @include corssFill(48px,48px,$color-forth);
+}
+.fight-corss-fill{
+    @include corssFill(96px,96px,$color-forth);
+    @include breakpoint(xs){
+        @include corssFill(80px,80px,$color-forth);
+    }
+    z-index: 1;
+}
+.winner-corss-fill{
+    @include corssFill(400px,400px,$color-secondary);
+    @include breakpoint(xs){
+        @include corssFill(210px,210px,$color-secondary);
+    }
+    z-index: 1;
+}
+.draw-corss-fill{
+    @include corssFill(300px,300px,$color-secondary);
+    @include breakpoint(xs){
+        @include corssFill(150px,150px,$color-secondary);
+    }
+    z-index: 1;
+}

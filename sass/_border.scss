@@ -1,0 +1,13 @@
+.border{
+    border: 4px solid $color-thrid;
+}
+@each $prop, $abbrev in (border-top:top,border-right:right,border-bottom:bottom,border-left:left) {
+    .border-#{$abbrev}{
+        #{$prop}: 4px solid $color-thrid;
+    }
+}
+@each $prop, $abbrev in (border-top-left-radius:tl,border-top-right-radius:tr,border-bottom-left-radius:bl,border-bottom-right-radius:br) {
+    .border-rs-#{$abbrev}{
+        #{$prop}: 8px;
+    }
+}

@@ -1,0 +1,23 @@
+.grid-row{
+    grid-template-columns: repeat(3,minmax(160px,1fr));
+    grid-template-rows: repeat(3,minmax(160px,1fr));
+    grid-auto-flow:column;
+    width: 100%;
+    grid-gap: 2px;
+    @include breakpoint(xs){
+        grid-template-columns: repeat(3,minmax(100px,1fr));
+        grid-template-rows: repeat(3,minmax(100px,1fr));
+        grid-auto-flow:column;
+        width: 100%;
+        grid-gap: 5px;
+    }
+}
+.grid-gap-thin{
+    grid-gap: 2px !important;
+}
+.grid-gap-bold{
+    grid-gap: 6px !important;
+}
+.align-self-stretch{
+    align-self: stretch;
+}
