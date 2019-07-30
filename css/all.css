@@ -1916,7 +1916,7 @@ body {
 
 .container {
   width: 600px;
-  height: 100vh;
+  height: auto;
   margin-right: auto;
   margin-left: auto;
 }
@@ -1924,7 +1924,7 @@ body {
 @media (max-width: 414px) {
   .container {
     width: 300px;
-    height: auto;
+    height: 100vh;
     margin-right: auto;
     margin-left: auto;
   }
