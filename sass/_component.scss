@@ -13,10 +13,10 @@
     @include circleFill(160px,160px,$color-thrid,10px,$color-primary);
 }
 .circle-stroke{
+    @include circleStroke(160px,160px,4px);
     @include breakpoint(xs){
         @include circleStroke(100px,100px,3px);
     }
-    @include circleStroke(160px,160px,4px);
 }
 .choice-circle-fill{
     @include breakpoint(xs){
