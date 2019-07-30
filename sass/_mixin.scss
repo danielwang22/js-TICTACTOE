@@ -57,6 +57,9 @@
     position: relative;
     z-index: -1;
     .inline-circle{
+      @include breakpoint(xs){
+        @include container($width - 40px ,$height - 40px);
+      }
       @include container($width - 40px ,$height - 40px);
       background: $color-thrid;
       border: $border solid $color-primary;

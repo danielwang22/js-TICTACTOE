@@ -1993,6 +1993,15 @@ body {
   }
 }
 
+@media only screen and (max-width: 480px) and (max-width: 480px) {
+  .circle-stroke .inline-circle {
+    width: 60px;
+    height: 60px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+}
+
 .circle-stroke .inline-circle {
   width: 120px;
   height: 120px;
@@ -2007,6 +2016,15 @@ body {
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
   z-index: 999;
+}
+
+@media only screen and (max-width: 480px) {
+  .circle-stroke .inline-circle {
+    width: 120px;
+    height: 120px;
+    margin-right: auto;
+    margin-left: auto;
+  }
 }
 
 .choice-circle-fill {
