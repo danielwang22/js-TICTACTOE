@@ -1,7 +1,7 @@
 //container
 .container{
     @include container(600px,auto);
-    @include breakpoint(xs){
+    @include breakpoint('xs'){
         @include container(300px,100vh)
     }
 }
