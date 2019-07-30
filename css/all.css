@@ -27,6 +27,12 @@
   -webkit-text-stroke-color: white;
 }
 
+@media only screen and (max-width: 480px) {
+  .font-stroke {
+    -webkit-text-stroke-width: 3px;
+  }
+}
+
 *,
 *::before,
 *::after {
@@ -1924,7 +1930,7 @@ body {
 @media only screen and (max-width: 480px) {
   .container {
     width: 300px;
-    height: 100vh;
+    height: 80vh;
     margin-right: auto;
     margin-left: auto;
   }

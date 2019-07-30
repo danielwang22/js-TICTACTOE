@@ -13,5 +13,8 @@
 }
 .font-stroke{
     -webkit-text-stroke-width: 5px; 
-    -webkit-text-stroke-color: $color-forth; 
+    -webkit-text-stroke-color: $color-forth;
+    @include breakpoint(xs){
+        -webkit-text-stroke-width: 3px; 
+    } 
 }
