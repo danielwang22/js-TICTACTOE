@@ -14,6 +14,17 @@
     <title>JS地下城 OOXX</title>
 </head>
 <body>
+    <!-- modal -->
+    <a href="#ex1" rel="modal:open" class="font-size-sm mt-2" style="text-decoration: none;">🚩</a>
+    <div id="ex1" class="modal" style="z-index: 999;overflow-y: scroll;">
+        <table id="score" class="w-100 text-secondary" border="0">
+            <tr>
+            　  <td class="font-size-xs text-center" style="width: 30%">Date</td>
+                <td class="font-size-xs text-center" style="width: 40%">YOUR Score</td>
+                <td class="font-size-xs text-center" style="width: 40%">ENEMY Score</td>
+        　  </tr>
+        </table>
+    </div>
     <div class="d-flex flex-row flex-wrap justify-content-center align-items-center">
         <div id="initialization" class="container d-flex flex-row flex-wrap align-items-center mt-6 mb-6">
             <div class="d-grid grid-row">
@@ -93,19 +104,7 @@
             <button id="endGame" class="btn col-3 bg-secondary text-forth font-size-sm font-xs-size-xs p-2 mt-2 mb-1">End Game</button>
         </div>
     </div>
-    <!-- modal -->
-    <a href="#ex1" rel="modal:open" class="font-size-sm mt-2" style="text-decoration: none;">🚩</a>
-    <div id="ex1" class="modal" style="z-index: 999;overflow-y: scroll;">
-        <table id="score" class="w-100 text-secondary" border="0">
-            <tr>
-            　  <td class="font-size-xs text-center" style="width: 30%">Date</td>
-                <td class="font-size-xs text-center" style="width: 40%">YOUR Score</td>
-                <td class="font-size-xs text-center" style="width: 40%">ENEMY Score</td>
-        　  </tr>
-        </table>
-    </div>
-
-    
+        
     <script src="./js/all.js"></script>
 </body>
 </html>
