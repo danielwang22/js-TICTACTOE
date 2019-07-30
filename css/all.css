@@ -1964,22 +1964,6 @@ body {
   z-index: -1;
 }
 
-.circle-stroke .inline-circle {
-  width: 120px;
-  height: 120px;
-  margin-right: auto;
-  margin-left: auto;
-  background: black;
-  border: 4px solid #FF6D70;
-  border-radius: 50%;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-  z-index: 999;
-}
-
 @media only screen and (min-width: 320px) {
   .circle-stroke {
     width: 100px;
@@ -2007,6 +1991,22 @@ body {
             transform: translate(-50%, -50%);
     z-index: 999;
   }
+}
+
+.circle-stroke .inline-circle {
+  width: 120px;
+  height: 120px;
+  margin-right: auto;
+  margin-left: auto;
+  background: black;
+  border: 4px solid #FF6D70;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  z-index: 999;
 }
 
 .choice-circle-fill {
@@ -2147,26 +2147,6 @@ body {
   position: relative;
 }
 
-.corss-fill::after, .corss-fill::before {
-  content: "";
-  background-color: #FF6D70;
-  width: 15%;
-  height: 100%;
-  position: absolute;
-  left: 40%;
-  z-index: -1;
-}
-
-.corss-fill::after {
-  -webkit-transform: rotate(45deg);
-          transform: rotate(45deg);
-}
-
-.corss-fill::before {
-  -webkit-transform: rotate(-45deg);
-          transform: rotate(-45deg);
-}
-
 @media only screen and (min-width: 320px) {
   .corss-fill {
     width: 100px;
@@ -2194,18 +2174,9 @@ body {
   }
 }
 
-.corss-stroke {
-  width: 160px;
-  height: 160px;
-  margin-right: auto;
-  margin-left: auto;
-  position: relative;
-}
-
-.corss-stroke::after, .corss-stroke::before {
+.corss-fill::after, .corss-fill::before {
   content: "";
-  background-color: black;
-  border: 3px solid white;
+  background-color: #FF6D70;
   width: 15%;
   height: 100%;
   position: absolute;
@@ -2213,14 +2184,22 @@ body {
   z-index: -1;
 }
 
-.corss-stroke::after {
+.corss-fill::after {
   -webkit-transform: rotate(45deg);
           transform: rotate(45deg);
 }
 
-.corss-stroke::before {
+.corss-fill::before {
   -webkit-transform: rotate(-45deg);
           transform: rotate(-45deg);
+}
+
+.corss-stroke {
+  width: 160px;
+  height: 160px;
+  margin-right: auto;
+  margin-left: auto;
+  position: relative;
 }
 
 @media only screen and (min-width: 320px) {
@@ -2251,6 +2230,27 @@ body {
   }
 }
 
+.corss-stroke::after, .corss-stroke::before {
+  content: "";
+  background-color: black;
+  border: 3px solid white;
+  width: 15%;
+  height: 100%;
+  position: absolute;
+  left: 40%;
+  z-index: -1;
+}
+
+.corss-stroke::after {
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+.corss-stroke::before {
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+
 .choice-corss-fill {
   width: 350px;
   height: 350px;
@@ -2260,26 +2260,6 @@ body {
   z-index: 1;
   -webkit-transition: all .6s ease-out;
   transition: all .6s ease-out;
-}
-
-.choice-corss-fill::after, .choice-corss-fill::before {
-  content: "";
-  background-color: #ED494C;
-  width: 15%;
-  height: 100%;
-  position: absolute;
-  left: 40%;
-  z-index: -1;
-}
-
-.choice-corss-fill::after {
-  -webkit-transform: rotate(45deg);
-          transform: rotate(45deg);
-}
-
-.choice-corss-fill::before {
-  -webkit-transform: rotate(-45deg);
-          transform: rotate(-45deg);
 }
 
 @media only screen and (min-width: 320px) {
@@ -2309,6 +2289,26 @@ body {
   }
 }
 
+.choice-corss-fill::after, .choice-corss-fill::before {
+  content: "";
+  background-color: #ED494C;
+  width: 15%;
+  height: 100%;
+  position: absolute;
+  left: 40%;
+  z-index: -1;
+}
+
+.choice-corss-fill::after {
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+.choice-corss-fill::before {
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+
 .choice-corss-fill:hover {
   width: 400px;
   height: 400px;
@@ -2320,26 +2320,6 @@ body {
   -webkit-transform: rotate(90deg);
           transform: rotate(90deg);
   z-index: 1;
-}
-
-.choice-corss-fill:hover::after, .choice-corss-fill:hover::before {
-  content: "";
-  background-color: #ED494C;
-  width: 15%;
-  height: 100%;
-  position: absolute;
-  left: 40%;
-  z-index: -1;
-}
-
-.choice-corss-fill:hover::after {
-  -webkit-transform: rotate(45deg);
-          transform: rotate(45deg);
-}
-
-.choice-corss-fill:hover::before {
-  -webkit-transform: rotate(-45deg);
-          transform: rotate(-45deg);
 }
 
 @media only screen and (min-width: 320px) {
@@ -2367,6 +2347,26 @@ body {
     -webkit-transform: rotate(-45deg);
             transform: rotate(-45deg);
   }
+}
+
+.choice-corss-fill:hover::after, .choice-corss-fill:hover::before {
+  content: "";
+  background-color: #ED494C;
+  width: 15%;
+  height: 100%;
+  position: absolute;
+  left: 40%;
+  z-index: -1;
+}
+
+.choice-corss-fill:hover::after {
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+.choice-corss-fill:hover::before {
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
 }
 
 #choice-card-corss {
@@ -2414,26 +2414,6 @@ body {
   z-index: 1;
 }
 
-.fight-corss-fill::after, .fight-corss-fill::before {
-  content: "";
-  background-color: white;
-  width: 15%;
-  height: 100%;
-  position: absolute;
-  left: 40%;
-  z-index: -1;
-}
-
-.fight-corss-fill::after {
-  -webkit-transform: rotate(45deg);
-          transform: rotate(45deg);
-}
-
-.fight-corss-fill::before {
-  -webkit-transform: rotate(-45deg);
-          transform: rotate(-45deg);
-}
-
 @media only screen and (min-width: 320px) {
   .fight-corss-fill {
     width: 80px;
@@ -2461,18 +2441,9 @@ body {
   }
 }
 
-.winner-corss-fill {
-  width: 400px;
-  height: 400px;
-  margin-right: auto;
-  margin-left: auto;
-  position: relative;
-  z-index: 1;
-}
-
-.winner-corss-fill::after, .winner-corss-fill::before {
+.fight-corss-fill::after, .fight-corss-fill::before {
   content: "";
-  background-color: #ED494C;
+  background-color: white;
   width: 15%;
   height: 100%;
   position: absolute;
@@ -2480,14 +2451,23 @@ body {
   z-index: -1;
 }
 
-.winner-corss-fill::after {
+.fight-corss-fill::after {
   -webkit-transform: rotate(45deg);
           transform: rotate(45deg);
 }
 
-.winner-corss-fill::before {
+.fight-corss-fill::before {
   -webkit-transform: rotate(-45deg);
           transform: rotate(-45deg);
+}
+
+.winner-corss-fill {
+  width: 400px;
+  height: 400px;
+  margin-right: auto;
+  margin-left: auto;
+  position: relative;
+  z-index: 1;
 }
 
 @media only screen and (min-width: 320px) {
@@ -2517,16 +2497,7 @@ body {
   }
 }
 
-.draw-corss-fill {
-  width: 300px;
-  height: 300px;
-  margin-right: auto;
-  margin-left: auto;
-  position: relative;
-  z-index: 1;
-}
-
-.draw-corss-fill::after, .draw-corss-fill::before {
+.winner-corss-fill::after, .winner-corss-fill::before {
   content: "";
   background-color: #ED494C;
   width: 15%;
@@ -2536,14 +2507,23 @@ body {
   z-index: -1;
 }
 
-.draw-corss-fill::after {
+.winner-corss-fill::after {
   -webkit-transform: rotate(45deg);
           transform: rotate(45deg);
 }
 
-.draw-corss-fill::before {
+.winner-corss-fill::before {
   -webkit-transform: rotate(-45deg);
           transform: rotate(-45deg);
+}
+
+.draw-corss-fill {
+  width: 300px;
+  height: 300px;
+  margin-right: auto;
+  margin-left: auto;
+  position: relative;
+  z-index: 1;
 }
 
 @media only screen and (min-width: 320px) {
@@ -2571,6 +2551,26 @@ body {
     -webkit-transform: rotate(-45deg);
             transform: rotate(-45deg);
   }
+}
+
+.draw-corss-fill::after, .draw-corss-fill::before {
+  content: "";
+  background-color: #ED494C;
+  width: 15%;
+  height: 100%;
+  position: absolute;
+  left: 40%;
+  z-index: -1;
+}
+
+.draw-corss-fill::after {
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+.draw-corss-fill::before {
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
 }
 
 .btn {
