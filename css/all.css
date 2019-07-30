@@ -1916,7 +1916,7 @@ body {
 
 .container {
   width: 600px;
-  height: auto;
+  height: 100vh;
   margin-right: auto;
   margin-left: auto;
 }

@@ -3,7 +3,7 @@
     @include breakpoint(xs){
         @include container(300px,auto)
     }
-    @include container(600px,auto)
+    @include container(600px,100vh)
 }
 //shape
 .circle-fill{
